@@ -1,1 +1,1 @@
-# Stake-Mine-App
+# Stake Mine App
