@@ -1,0 +1,247 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #171717;
+}
+body{
+        background-color: #171717;
+        color: snow;
+}
+.hide{
+    display: none;
+}
+.main{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    font-family: underdog;
+    background-color: #141414;
+    h1{
+        font-size: 1.8rem;
+    }
+}
+.money{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .wallet-money{
+        background-color: #171717;
+        border: snow 1px solid;
+        padding: 10px 20px;
+        border-radius: 0.5rem;
+        width: 7rem;
+        text-align: right;
+        font-size: 1.1rem;
+    }
+    .wallet-div{
+        background-color: #027DFF;
+        padding: 10px 20px;
+        border-radius: 0.5rem;
+        margin-left: 0.8rem;
+        font-family: sans-serif;
+        font-weight: bolder;
+    }
+    #wallet-btn{
+        background-color: #027DFF;
+        width: 100%;
+        height: 100%;
+    }
+}
+.dashboard{
+    display: flex;
+    flex-direction: column;
+    padding: 10px 20px;
+    background-color: #141414; 
+    width: 27.5rem;
+    height: 100vh;
+}
+.dashboard .bet{
+    background-color: #141414;
+    input{
+        width: 100%;
+        background-color: #171717;
+    }
+}
+.dashboard .mines{
+    background-color: #141414;
+}
+.dashboard .mines input{
+    width: 100%;
+    background-color: #171717;
+}
+.dashboard .bet-button{
+    margin-top: 1rem;
+    background-color: #141414;
+    button {
+        background-color: #09a602;
+        padding: 15px 20px;
+        border-radius: 1rem;
+        width: 100%;
+        font-size: 1.2rem;
+    }
+    button:hover{
+        background-color: #0a9b02;
+        cursor: pointer;
+        box-shadow: #0a9b02 0px 0px 10px;
+    }
+}
+.score{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    .curr-score{
+        font-size: 2.4rem;
+        margin-left: 1rem;
+        color: #0a9b02;
+        font-weight: 600;
+        font-family: VT323;
+    }
+}
+.game-board{
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;
+    padding: 10px 20px;
+    width: 100%;
+    height: 100vh;
+    h1{
+        font-size: 1.5rem;
+    }
+    .board{
+        display: grid;
+        grid-template-columns: repeat(var(--size), 60px);
+        grid-template-rows: repeat(var(--size), 60px);
+        gap: 50px;
+        margin-top: 1.5rem;
+        div{
+            border-radius: 0.8rem;
+            height: 6rem;
+            width: 6rem;
+        }
+    }
+}
+.withdraw{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 70px;
+    #withdraw-btn{
+        background-color: #09a602;
+        padding: 15px 20px;
+        border-radius: 1rem;
+        width: 100%;
+        font-size: 1.2rem;
+
+    }
+    #withdraw-btn:hover{
+        background-color: #009C41;
+        cursor: pointer;
+        box-shadow: #0a9b02 0px 0px 10px;
+    }
+}
+.board > [data-status="hidden"] {
+    background-color: #141414;
+    cursor: pointer;
+}
+.board > [data-status="mine"]{
+    background-image: url(bomb-icon.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.board > [data-status="safe"]{
+    background-image: url(gem.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+@media (max-width: 900px){
+     .game-board{
+        .board{
+        max-width: 450px;
+        max-height: 450px;
+        gap: 30px;
+            div{
+            height: 75px;
+            width: 75px;
+            }
+        }
+    }
+    
+}
+@media (max-width: 570px){
+     .game-board{
+        .board{
+        max-width: 370px;
+        max-height: 370px;
+        gap: 12px;
+            div{
+            height: 60px;
+            width: 60px;
+            }
+        }
+    }
+    
+}
+@media (max-width: 490px){
+     .game-board{
+        .board{
+        max-width: 335px;
+        max-height: 335px;
+        gap: 6px;
+            div{
+            height: 58px;
+            width: 58px;
+            }
+        }
+    }
+    
+}
+@media (max-width: 460px){
+     .game-board{
+        .board{
+        max-width: 297px;
+        max-height: 297px;
+        gap: 1px;
+            div{
+            height: 53px;
+            width: 53px;
+            }
+        }
+    }
+    
+}
+@media (max-width: 534px){
+    .dashboard{
+        max-width: 13rem;
+    }
+}
+@media (max-width: 512px){
+    .dashboard{
+        max-width: 11rem;
+    }
+}
+@media (max-width: 467px){
+    .dashboard{
+        max-width: 10rem;
+    }
+}
+@media (max-width: 451px){
+    .dashboard{
+        max-width: 9rem;
+    }
+}
+@media (max-width: 435px){
+    .dashboard{
+        max-width: 7rem;
+    }
+}
